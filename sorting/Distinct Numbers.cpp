@@ -20,21 +20,23 @@ using namespace std;
 #define vvi vector<vector<int>>
 #define DIGITS(x) ((int)to_string(x).size())
 
-int n, m;
+
 
 
 
 int main() {
     fast_io;
+    int n; cin>>n;
+    set<int> st;
 
-    cin >> n >> m;
+    for (int i = 0; i < n; i++){
+        int x;
+        cin>>x;
+        st.insert(x);
+    }
 
-
-
-
+    cout<<st.size()<<"\n";
     
-    
-
     
     return 0;
 }

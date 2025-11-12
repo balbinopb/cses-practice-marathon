@@ -20,20 +20,42 @@ using namespace std;
 #define vvi vector<vector<int>>
 #define DIGITS(x) ((int)to_string(x).size())
 
-int n, m;
+
 
 
 
 int main() {
     fast_io;
 
-    cin >> n >> m;
+    ll n,m,k; cin>>n>>m>>k;
 
+    vl a(n),b(m);
 
+    for (ll i = 0; i < n; i++)cin >> a[i];
+    for (ll i = 0; i < m; i++)cin >> b[i];
 
-
+    sort(all(a));    
+    sort(all(b));
     
+    ll i = 0, j = 0, cnt = 0;
+
+    while (i < n && j < m) {
+        if (b[j] < a[i] - k) {
+            j++; // apartment too small
+        } 
+        else if (b[j] > a[i] + k) {
+            i++; // apartment too big
+        } 
+        else {
+            cnt++; // match found
+            i++;
+            j++;
+        }
+    }
+
+    cout << cnt << "\n";
     
+
 
     
     return 0;

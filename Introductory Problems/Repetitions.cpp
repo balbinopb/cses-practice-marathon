@@ -20,21 +20,29 @@ using namespace std;
 #define vvi vector<vector<int>>
 #define DIGITS(x) ((int)to_string(x).size())
 
-int n, m;
+
 
 
 
 int main() {
     fast_io;
 
-    cin >> n >> m;
+    string s; cin>>s;
+    int cnt=1,tmp=1;
+    
+    for (int i = 1; i < s.size(); i++){
+        if(s[i]==s[i-1]){
+            tmp++;
+        }else{
+            tmp=1;
+        }
 
-
-
+        cnt=max(cnt,tmp);
+    }
+    
 
     
-    
-
+    cout<<cnt<<"\n";
     
     return 0;
 }

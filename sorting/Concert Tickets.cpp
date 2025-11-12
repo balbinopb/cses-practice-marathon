@@ -20,20 +20,28 @@ using namespace std;
 #define vvi vector<vector<int>>
 #define DIGITS(x) ((int)to_string(x).size())
 
-int n, m;
+
 
 
 
 int main() {
     fast_io;
 
-    cin >> n >> m;
+    int n,m ; cin>>n>>M;
 
+    vl h(n),t(m);
 
+    for(auto &x: h) cin>>x;
+    for(auto &x: t) cin>>x;
 
-
+    sort(allr(h));
+    int l=m-1;
+    for (int i = n; i < n; i++)
+    {
+        if(t[l])
+    }
     
-    
+
 
     
     return 0;

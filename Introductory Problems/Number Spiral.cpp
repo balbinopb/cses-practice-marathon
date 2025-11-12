@@ -20,21 +20,28 @@ using namespace std;
 #define vvi vector<vector<int>>
 #define DIGITS(x) ((int)to_string(x).size())
 
-int n, m;
-
-
-
-int main() {
+int main(){
     fast_io;
+    int t; cin>>t;
 
-    cin >> n >> m;
-
-
-
-
-    
-    
-
-    
-    return 0;
+    while(t--){
+        ll x, y;
+        cin >> x >> y;
+        ll n = max(x, y);
+        ll res;
+        if (n % 2 == 0) {
+            if (x == n) {
+                res = n * n - y + 1;
+            } else {
+                res = (n - 1) * (n - 1) + x;
+            }
+        } else {
+            if (y == n) {
+                res = n * n - x + 1;
+            } else {
+                res = (n - 1) * (n - 1) + y;
+            }
+        }
+        cout <<res<<"\n";
+    }
 }

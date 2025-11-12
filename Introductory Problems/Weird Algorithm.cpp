@@ -20,21 +20,30 @@ using namespace std;
 #define vvi vector<vector<int>>
 #define DIGITS(x) ((int)to_string(x).size())
 
-int n, m;
+
 
 
 
 int main() {
     fast_io;
 
-    cin >> n >> m;
-
-
-
-
+    ll n; cin>>n;
     
+    cout<<n<< " ";
     
-
+    while(true){
+        if(n==1){
+            break;
+        }
+        if(n%2==0){
+            n =n/2LL;
+            cout<<n<< " ";
+        }else{
+            n =n*3LL+1LL;
+            cout<<n<< " ";
+        }
+    }
+    cout<<"\n";
     
     return 0;
 }

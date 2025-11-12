@@ -20,20 +20,34 @@ using namespace std;
 #define vvi vector<vector<int>>
 #define DIGITS(x) ((int)to_string(x).size())
 
-int n, m;
+
 
 
 
 int main() {
     fast_io;
 
-    cin >> n >> m;
+    ll n,x;cin>>n>>x;
 
+    vl a(n);
 
+    for (ll i = 0; i < n; i++)cin >> a[i];
 
+    sort(all(a));
 
-    
-    
+    ll i = 0, j = n - 1;
+    ll cnt = 0;
+
+    while (i <= j) {
+        if (a[i] + a[j] <= x) {
+            i++; 
+        }
+        j--;
+        cnt++;
+    }
+
+    cout<<cnt<<endl;
+
 
     
     return 0;

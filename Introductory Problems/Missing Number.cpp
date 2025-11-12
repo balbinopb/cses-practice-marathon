@@ -20,21 +20,25 @@ using namespace std;
 #define vvi vector<vector<int>>
 #define DIGITS(x) ((int)to_string(x).size())
 
-int n, m;
+
 
 
 
 int main() {
     fast_io;
 
-    cin >> n >> m;
+    ll n; cin>>n;
 
+    ll sum= (n*(n+1))/2;
 
-
-
+    ll curSum=0;
+    for (int i = 0; i < n-1; i++){
+        ll x ; cin>>x;
+        curSum+=x;
+    }
     
-    
 
+    cout<<sum-curSum<<"\n";
     
     return 0;
 }

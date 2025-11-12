@@ -20,21 +20,27 @@ using namespace std;
 #define vvi vector<vector<int>>
 #define DIGITS(x) ((int)to_string(x).size())
 
-int n, m;
+
 
 
 
 int main() {
     fast_io;
 
-    cin >> n >> m;
+    int n; cin>>n;
 
-
-
-
+    vl a(n);
+    for (int i = 0; i < n; i++) cin>>a[i];
     
-    
+    ll cnt=0;
+    for (int i = 1; i < n; i++) {
+        if(a[i]<a[i-1]) {
+            cnt+=a[i-1]-a[i];
+            a[i] +=a[i-1]-a[i];
+        }
+    }
 
+    cout<<cnt<<"\n";
     
     return 0;
 }

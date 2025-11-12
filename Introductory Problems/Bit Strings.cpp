@@ -18,21 +18,26 @@ using namespace std;
 #define vi vector<int>
 #define vl vector<long long>
 #define vvi vector<vector<int>>
+#define MOD 1000000007
 #define DIGITS(x) ((int)to_string(x).size())
 
-int n, m;
+
 
 
 
 int main() {
     fast_io;
 
-    cin >> n >> m;
+    ll n; cin>>n;
+    ll cnt=1LL;
+    for (ll i = 1; i <= n; i++)
+    {
+        cnt =(cnt*2LL)%MOD;
+    }
 
-
-
-
+    cout<<cnt<<"\n";
     
+
     
 
     
